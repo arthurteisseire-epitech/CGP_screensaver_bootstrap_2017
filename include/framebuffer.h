@@ -8,8 +8,8 @@
 #ifndef FRAMEBUFFER_H
 #define FRAMEBUFFER_H
 
-#define SIZE_X 800
-#define SIZE_Y 600
+#define WIDTH 800
+#define HEIGHT 600
 
 #include <SFML/Graphics.h>
 #include <stdlib.h>
@@ -24,5 +24,8 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height);
 void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color);
 void my_put_square(framebuffer_t *buffer, unsigned int x, unsigned int y, unsigned int size_x, unsigned int size_b, sfColor color);
 void init(framebuffer_t *buffer);
+sfSprite *create_sprite_from_buffer(framebuffer_t *buffer);
+void check_exit(sfRenderWindow *window);
+sfRenderWindow *create_window(char *title, sfVideoMode mode);
 
 #endif

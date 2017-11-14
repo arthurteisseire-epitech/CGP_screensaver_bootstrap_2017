@@ -18,6 +18,14 @@ framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 	return (buffer);
 }
 
+void init(framebuffer_t *buffer)
+{
+	int size = buffer->height * buffer->width * 4;
+
+	for (int i = 0; i < size; i++)
+		buffer->pixels[i] = 0;
+}
+
 void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor color)
 {
 	unsigned int pos_x = x * 4;
@@ -27,12 +35,4 @@ void my_put_pixel(framebuffer_t *buffer, unsigned int x, unsigned int y, sfColor
 	buffer->pixels[pos_y + pos_x + 1] = color.g;
 	buffer->pixels[pos_y + pos_x + 2] = color.b;
 	buffer->pixels[pos_y + pos_x + 3] = color.a;
-}
-
-void init(framebuffer_t *buffer)
-{
-	int size = buffer->height * buffer->width * 4;
-
-	for (int i = 0; i < size; i++)
-		buffer->pixels[i] = 0;
 }

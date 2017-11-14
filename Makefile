@@ -9,7 +9,8 @@ DSRC	=	$(realpath src)/
 FUNC	=	$(DSRC)/functions/
 SRC     =	$(DSRC)main.c \
 		$(DSRC)pixel-functions.c \
-		$(DSRC)shapes-functions.c
+		$(DSRC)shapes-functions.c \
+		$(DSRC)tools.c
 INC	=	$(realpath include)
 CFLAGS	=	-Wall -W -Wextra -I$(INC) -g
 LDFLAGS	=	-l c_graph_prog
