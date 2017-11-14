@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "framebuffer.h"
+#include "pixel.h"
 
 sfSprite *create_sprite_from_buffer(framebuffer_t *buffer)
 {
@@ -37,6 +37,5 @@ sfRenderWindow *create_window(char *title, sfVideoMode mode)
 	window = sfRenderWindow_create(mode, title, sfResize | sfClose, NULL);
 	if (!window)
 		exit(84);
-
 	return (window);
 }

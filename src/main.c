@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "framebuffer.h"
+#include "pixel.h"
 
 int main(void)
 {

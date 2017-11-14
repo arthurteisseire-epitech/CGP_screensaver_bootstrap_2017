@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "framebuffer.h"
+#include "pixel.h"
 
 framebuffer_t *framebuffer_create(unsigned int width, unsigned int height)
 {

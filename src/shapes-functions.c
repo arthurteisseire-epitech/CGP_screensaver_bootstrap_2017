@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "framebuffer.h"
+#include "pixel.h"
 
 void my_put_square(framebuffer_t *buffer, unsigned int x, unsigned int y, unsigned int size_x, unsigned int size_y, sfColor color)
 {
